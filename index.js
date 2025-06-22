@@ -11,6 +11,8 @@ const port = 3001;     // Define the port the server will listen on
 app.use(cors()); // Enable CORS for all routes, allowing the frontend to access the API
 app.use(express.json()); // Enable parsing of JSON request bodies. This is essential for POST requests to read 'request.body'.
 
+app.use(express.static('dist'));
+
 // --- Phonebook Data ---
 // This is our initial mock data for the phonebook entries.
 // In a real application, this would come from a database.
